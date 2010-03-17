@@ -37,18 +37,18 @@ LAYOUT		;an extra '@' at the end is a dead key
 0d	OEM_PLUS	0	003d	002b	-1	-1	-1		// EQUALS SIGN, PLUS SIGN, <none>, <none>, <none>
 10	Q		1	q	Q	-1	-1	-1		// LATIN SMALL LETTER Q, LATIN CAPITAL LETTER Q, <none>, <none>, <none>
 11	W		1	w	W	-1	-1	-1		// LATIN SMALL LETTER W, LATIN CAPITAL LETTER W, <none>, <none>, <none>
-12	E		1	e	E	-1	20ac	00c9		// LATIN SMALL LETTER E, LATIN CAPITAL LETTER E, <none>, EURO SIGN, LATIN CAPITAL LETTER E WITH ACUTE
+12	E		1	e	E	-1	00b4@	00c9		// LATIN SMALL LETTER E, LATIN CAPITAL LETTER E, <none>, ACUTE ACCENT, LATIN CAPITAL LETTER E WITH ACUTE
 13	R		1	r	R	-1	-1	-1		// LATIN SMALL LETTER R, LATIN CAPITAL LETTER R, <none>, <none>, <none>
 14	T		1	t	T	-1	-1	-1		// LATIN SMALL LETTER T, LATIN CAPITAL LETTER T, <none>, <none>, <none>
 15	Y		1	y	Y	-1	-1	-1		// LATIN SMALL LETTER Y, LATIN CAPITAL LETTER Y, <none>, <none>, <none>
-16	U		1	u	U	-1	-1	00da		// LATIN SMALL LETTER U, LATIN CAPITAL LETTER U, <none>, <none>, LATIN CAPITAL LETTER U WITH ACUTE
+16	U		1	u	U	-1	00a8@	00da		// LATIN SMALL LETTER U, LATIN CAPITAL LETTER U, <none>, DIAERESIS, LATIN CAPITAL LETTER U WITH ACUTE
 17	I		1	i	I	-1	-1	00cd		// LATIN SMALL LETTER I, LATIN CAPITAL LETTER I, <none>, <none>, LATIN CAPITAL LETTER I WITH ACUTE
 18	O		1	o	O	-1	-1	00d3		// LATIN SMALL LETTER O, LATIN CAPITAL LETTER O, <none>, <none>, LATIN CAPITAL LETTER O WITH ACUTE
 19	P		1	p	P	-1	-1	-1		// LATIN SMALL LETTER P, LATIN CAPITAL LETTER P, <none>, <none>, <none>
 1a	OEM_4		0	005b	007b	001b	-1	-1		// LEFT SQUARE BRACKET, LEFT CURLY BRACKET, ESCAPE, <none>, <none>
 1b	OEM_6		0	005d	007d	001d	-1	-1		// RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, INFORMATION SEPARATOR THREE, <none>, <none>
 1e	A		1	a	A	-1	-1	00c1		// LATIN SMALL LETTER A, LATIN CAPITAL LETTER A, <none>, <none>, LATIN CAPITAL LETTER A WITH ACUTE
-1f	S		1	s	S	-1	-1	-1		// LATIN SMALL LETTER S, LATIN CAPITAL LETTER S, <none>, <none>, <none>
+1f	S		1	s	S	-1	00df	-1		// LATIN SMALL LETTER S, LATIN CAPITAL LETTER S, <none>, LATIN SMALL LETTER SHARP S (German), <none>
 20	D		1	d	D	-1	-1	-1		// LATIN SMALL LETTER D, LATIN CAPITAL LETTER D, <none>, <none>, <none>
 21	F		1	f	F	-1	-1	-1		// LATIN SMALL LETTER F, LATIN CAPITAL LETTER F, <none>, <none>, <none>
 22	G		1	g	G	-1	-1	-1		// LATIN SMALL LETTER G, LATIN CAPITAL LETTER G, <none>, <none>, <none>
@@ -73,6 +73,38 @@ LAYOUT		;an extra '@' at the end is a dead key
 39	SPACE		0	0020	0020	0020	-1	-1		// SPACE, SPACE, SPACE, <none>, <none>
 56	OEM_5		0	0060	007e	-1	-1	-1		// GRAVE ACCENT, TILDE, <none>, <none>, <none>
 53	DECIMAL	0	002e	002e	-1	-1	-1		// FULL STOP, FULL STOP, , , 
+
+
+DEADKEY	00b4
+
+0041	00c1	// A -> Á
+0061	00e1	// a -> á
+0045	00c9	// E -> É
+0065	00e9	// e -> é
+0049	00cd	// I -> Í
+0069	00ed	// i -> í
+004f	00d3	// O -> Ó
+006f	00f3	// o -> ó
+0055	00da	// U -> Ú
+0075	00fa	// u -> ú
+0059	00dd	// Y -> Ý
+0079	00fd	// y -> ý
+0020	00b4	//   -> ´
+
+DEADKEY	00a8
+
+0041	00c4	// A -> Ä
+0061	00e4	// a -> ä
+0045	00cb	// E -> Ë
+0065	00eb	// e -> ë
+0049	00cf	// I -> Ï
+0069	00ef	// i -> ï
+004f	00d6	// O -> Ö
+006f	00f6	// o -> ö
+0055	00dc	// U -> Ü
+0075	00fc	// u -> ü
+0079	00ff	// y -> ÿ
+0020	00a8	//   -> ¨
 
 
 KEYNAME
@@ -153,6 +185,12 @@ KEYNAME_EXT
 5b	"Left Windows"
 5c	"Right Windows"
 5d	Application
+
+KEYNAME_DEAD
+
+00b4	"ACUTE ACCENT"
+00a8	"DIAERESIS"
+
 
 DESCRIPTIONS
 
