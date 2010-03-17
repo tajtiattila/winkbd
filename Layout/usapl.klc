@@ -45,8 +45,8 @@ LAYOUT		;an extra '@' at the end is a dead key
 17	I		1	i	I	-1	-1	00cd		// LATIN SMALL LETTER I, LATIN CAPITAL LETTER I, <none>, <none>, LATIN CAPITAL LETTER I WITH ACUTE
 18	O		1	o	O	-1	-1	00d3		// LATIN SMALL LETTER O, LATIN CAPITAL LETTER O, <none>, <none>, LATIN CAPITAL LETTER O WITH ACUTE
 19	P		1	p	P	-1	-1	-1		// LATIN SMALL LETTER P, LATIN CAPITAL LETTER P, <none>, <none>, <none>
-1a	OEM_4		0	005b	007b	-1	-1	-1		// LEFT SQUARE BRACKET, LEFT CURLY BRACKET, <none>, <none>, <none>
-1b	OEM_6		0	005d	007d	-1	-1	-1		// RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, <none>, <none>, <none>
+1a	OEM_4		0	005b	007b	001b	-1	-1		// LEFT SQUARE BRACKET, LEFT CURLY BRACKET, ESCAPE, <none>, <none>
+1b	OEM_6		0	005d	007d	001d	-1	-1		// RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, INFORMATION SEPARATOR THREE, <none>, <none>
 1e	A		1	a	A	-1	-1	00c1		// LATIN SMALL LETTER A, LATIN CAPITAL LETTER A, <none>, <none>, LATIN CAPITAL LETTER A WITH ACUTE
 1f	S		1	s	S	-1	-1	-1		// LATIN SMALL LETTER S, LATIN CAPITAL LETTER S, <none>, <none>, <none>
 20	D		1	d	D	-1	-1	-1		// LATIN SMALL LETTER D, LATIN CAPITAL LETTER D, <none>, <none>, <none>
@@ -59,7 +59,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 27	OEM_1		0	003b	003a	-1	-1	-1		// SEMICOLON, COLON, <none>, <none>, <none>
 28	OEM_3		0	0027	0022	-1	-1	-1		// APOSTROPHE, QUOTATION MARK, <none>, <none>, <none>
 29	OEM_8		0	00a7	00b1	-1	-1	-1		// SECTION SIGN, PLUS-MINUS SIGN, <none>, <none>, <none>
-2b	OEM_7		0	005c	007c	-1	-1	-1		// REVERSE SOLIDUS, VERTICAL LINE, <none>, <none>, <none>
+2b	OEM_7		0	005c	007c	001c	-1	-1		// REVERSE SOLIDUS, VERTICAL LINE, INFORMATION SEPARATOR FOUR, <none>, <none>
 2c	Z		1	z	Z	-1	-1	-1		// LATIN SMALL LETTER Z, LATIN CAPITAL LETTER Z, <none>, <none>, <none>
 2d	X		1	x	X	-1	-1	-1		// LATIN SMALL LETTER X, LATIN CAPITAL LETTER X, <none>, <none>, <none>
 2e	C		1	c	C	-1	-1	-1		// LATIN SMALL LETTER C, LATIN CAPITAL LETTER C, <none>, <none>, <none>
@@ -157,7 +157,9 @@ KEYNAME_EXT
 DESCRIPTIONS
 
 0409	United States-International (Apple) - Custom
+
 LANGUAGENAMES
 
 0409	English (United States)
+
 ENDKBD
