@@ -11,10 +11,10 @@ The keyboard layout is based on the Apple US International keyboard layout, whic
 is exactly like the usual US layout until alt gr is used. Many keys using alt gr are
 mapped to dead keys, making it possible to enter accents for many letters. Examples:
 
-alt+s: ß
-alt+e: grave accent (before aeiou → áéíóú)
-alt+u: umlaut (before aeou → äëöü)
-alt+j: double grave accent (before ou → őű)
+* alt+s: ß
+* alt+e: grave accent (typing before aeiou it becomes áéíóú)
+* alt+u: umlaut (aeou → äëöü)
+* alt+j: double grave accent (ou → őű)
 
 Scancode Map
 ------------

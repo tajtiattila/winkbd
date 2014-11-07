@@ -3,7 +3,8 @@
 ;* FILE: 	digraphs.ahk
 ;* PRODUCT:	Tools
 ;* AUTHOR: 	Ingo Karkat <ingo@karkat.de>
-;* DATE CREATED:14-Apr-2010
+;* AUTHOR: 	Attila Tajti <attila.tajti@gmail.com>
+;* DATE CREATED:07-Nov-2014
 ;*
 ;*******************************************************************************
 ;* DESCRIPTION: 
