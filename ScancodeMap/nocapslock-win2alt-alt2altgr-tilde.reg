@@ -1,11 +1,12 @@
 Windows Registry Editor Version 5.00
 
 ; 0x003a001d: Caps Lock (0x3a) -> Left Ctrl (0x1d)
-; 0x0038e038: Left Alt (0xe05c) -> Right Alt (0x38)
+; 0x0038e038: Left Alt (0x38) -> Right Alt (0xe038)
 ; 0xe05b0038: Left Windows (0xe05b) -> Left Alt (0x38)
 ; 0xe05c0038: Right Windows (0xe05c) -> Left Alt (0x38)
-; 0x00dc00df: Backtick/Tilde ~ (0xdc) - Paragraph § (0xdf)
+; 0x00290056: Backtick/Tilde ~ (0x29) -> Paragraph § (0x56)
+; 0x00560029: Paragraph § (0x56) -> Backtick/Tilde ~ (0x29)
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
-"Scancode Map"=hex:00,00,00,00,00,00,00,00,06,00,00,00,1d,00,3a,00,38,e0,38,00,38,00,5b,e0,38,00,5c,e0,dc,00,df,00,00,00,00,00
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,07,00,00,00,1d,00,3a,00,38,e0,38,00,38,00,5b,e0,38,00,5c,e0,56,00,29,00,29,00,56,00,00,00,00,00
 
 
