@@ -1300,23 +1300,41 @@ digraphMap["fl"] := 64258 ; U+FB02 LATIN SMALL LIGATURE FL
 digraphMap["ft"] := 64261 ; U+FB05 LATIN SMALL LIGATURE LONG S T
 digraphMap["st"] := 64262 ; U+FB06 LATIN SMALL LIGATURE ST
 
+Transform, CtrlK, Chr, 11
+
 #IfWinNotActive ahk_group NativeDigraphApps
+#MaxThreadsPerHotkey 1
 ^k::
 {
     ; Case sensitive, Ignore script-generated input, Limit length to 2 keys, Recognize CTRL-modified keystrokes.
-    Input, Digraph, C I L2 M
+	HotKey ^k, Off
+    Input, First, C I L1 M
+	HotKey ^k, On
 
     if ErrorLevel != Max
-	return
-    else if ErrorLevel = Timeout
-    {
-	Send, %Digraph%
-	return
-    }
-    else if ErrorLevel = NewInput
-	return
+	{
+		return
+	}
 
-    ; MsgBox, You entered "%Digraph%" here.
+	;MsgBox, First, Ctrlk
+	if First = %CtrlK%
+	{
+		HotKey ^k, Off
+	    SendInput %First%
+		HotKey ^k, On
+		return
+	}
+
+	HotKey ^k, Off
+    Input, Second, C I L1 M
+	HotKey ^k, On
+    if ErrorLevel != Max
+	{
+		return
+	}
+
+	Digraph := First . Second
+    ;MsgBox, You entered "%Digraph%" here.
 
 	Code := digraphMap[Digraph]
 	if (Code <> "") {
@@ -1325,8 +1343,10 @@ digraphMap["st"] := 64262 ; U+FB06 LATIN SMALL LIGATURE ST
 	; Unknown digraph, use the last key only.
 		StringRight, LastChar, Digraph, 1
 		Char = %LastChar%
+		SoundBeep
     }
 
+	HotKey ^k, Off
     ; GTK application windows (e.g. Pidgin) do not accept non-ASCII characters
     ; when sent this way; neither does ALT+code (e.g. ALT+0228 = ä) work.
     ; Cp. https://bugzilla.gnome.org/show_bug.cgi?id=371371
@@ -1344,6 +1364,7 @@ digraphMap["st"] := 64262 ; U+FB06 LATIN SMALL LIGATURE ST
     {
 	SendInput, %Char%
     }
+	HotKey ^k, On
     return
 }
 
