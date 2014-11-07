@@ -29,4 +29,5 @@ AutoHotkey
 There is an AutoHotkey script that makes writing Vim-like digraphs in other windows.
 Original version was based on the one from
 [Ingo Karkat](http://ingo-karkat.de/downloads/tools/AutoHotkey/index.html).
+All digraphs from Vim are supported.
 
