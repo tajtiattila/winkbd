@@ -23,3 +23,10 @@ The registry files in the scancode map folder are used to disable the caps lock 
 windows keys. The left alt works like the right alt (ie. alt gr), and the normal alt
 key is mapped onto the windows keys.
 
+AutoHotkey
+----------
+
+There is an AutoHotkey script that makes writing Vim-like digraphs in other windows.
+Original version was based on the one from
+[Ingo Karkat](http://ingo-karkat.de/downloads/tools/AutoHotkey/index.html).
+
